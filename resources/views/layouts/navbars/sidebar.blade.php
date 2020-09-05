@@ -130,8 +130,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
+                    <a class="nav-link" href="/admin/tracks">
+                        <i class="ni ni-planet text-blue"></i> {{ __('Tracks') }}
                     </a>
                 </li>
                 <li class="nav-item">
@@ -142,11 +142,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
                     </a>
                 </li>
                 <!-- <li class="nav-item mb-5 bg-danger" style="position: absolute; bottom: 0;">
