@@ -83,7 +83,7 @@
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
-                @if(strtolower(auth()->user()->email) == "omaralhoori@email.com")
+                @if(strtolower(auth()->user()->email) == env('ADMIN_EMAIL', 'admin_email@mail.com'))
                 <li class="nav-item">
                     <a class="nav-link active" href="#admins" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #f4645f;"></i>

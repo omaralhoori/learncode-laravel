@@ -16,7 +16,7 @@ class Owner
     public function handle($request, Closure $next)
     {
         $user = auth()->user();
-        if(strtolower($user->email) == 'omaralhoori@email.com'){
+        if(strtolower($user->email) == env('ADMIN_EMAIL', 'admin_email@mail.com')){
             return $next($request);
         }
         return abort(404);
