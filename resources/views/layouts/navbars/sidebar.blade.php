@@ -144,6 +144,16 @@
                         <i class="fas fa-video"></i> {{ __('Videos') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/quizzes">
+                        <i class="fas fa-check" style="color: #5eea45;"></i> {{ __('Quizzes') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/questions">
+                        <i class="fas fa-question-circle" style="color: #31e0da;"></i> {{ __('Questions') }}
+                    </a>
+                </li>
 
             </ul>
 
