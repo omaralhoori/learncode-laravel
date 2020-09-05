@@ -38,6 +38,8 @@ Route::group(['middleware' => ['auth','admin']], function () {
 
 	Route::resource('admin/tracks', 'Admin\TrackController');
 
+	Route::resource('admin/courses', 'Admin\CourseController');
+
 	Route::get('admin/profile', ['as' => 'profile.edit', 'uses' => 'Admin\ProfileController@edit']);
 	Route::put('admin/profile', ['as' => 'profile.update', 'uses' => 'Admin\ProfileController@update']);
 	Route::put('admin/profile/password', ['as' => 'profile.password', 'uses' => 'Admin\ProfileController@password']);

@@ -135,13 +135,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-pin-3 text-orange"></i> {{ __('Maps') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
+                    <a class="nav-link" href="/admin/courses">
+                        <i class="ni ni-key-25 text-info"></i> {{ __('Courses') }}
                     </a>
                 </li>
                 <!-- <li class="nav-item mb-5 bg-danger" style="position: absolute; bottom: 0;">

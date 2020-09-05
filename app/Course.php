@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     protected  $fillable = [
-        'title','status','link'
+        'title','status','link', 'track_id'
     ];
 
     public function photo(){
