@@ -38,13 +38,18 @@
                             <div class="col-lg-3 col-md-6 mt-2 mb-2">
                                 <div class="card" style="width: 18rem;">
                                     @if($course->photo)
-                                    <img height="150" width="200" src="/storage/courseImgs/{{$course->photo->filename}}" class="card-img-top" alt="Course Photo">
+                                        <a href="/admin/courses/{{$course->id}}">
+                                            <img height="150" width="200" src="/storage/courseImgs/{{$course->photo->filename}}" class="card-img-top" alt="Course Photo">
+                                        </a>
                                     @else
-                                    <img height="150" width="200" src="/imgs/course_no_photo.jpg" class="card-img-top" alt="Course Photo">
+                                        <a href="/admin/courses/{{$course->id}}">
+                                            <img height="150" width="200" src="/imgs/course_no_photo.jpg" class="card-img-top" alt="Course Photo">
+                                        </a>
                                     @endif
                                     <div class="card-body">
-                                        <h5 class="card-title">{{ \Str::limit($course->title, 100)}}</h5>
-
+                                        <a href="/admin/courses/{{$course->id}}">
+                                            <h5 class="card-title">{{ \Str::limit($course->title, 100)}}</h5>
+                                        </a>
 
                                         <form method="POST" action="{{route('courses.destroy', $course)}}">
                                             @csrf

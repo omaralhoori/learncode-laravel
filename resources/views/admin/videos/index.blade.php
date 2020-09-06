@@ -42,7 +42,8 @@
                             <tbody>
                             @foreach ($videos as $video)
                                 <tr>
-                                    <td>{{ \Str::limit($video->title, 50) }}</td>
+                                    <td><a href="/admin/videos/{{$video->id}}">
+                                            {{ \Str::limit($video->title, 50) }}</a></td>
                                     <td>
                                         <a href="/admin/courses/{{$video->course->id}}">
                                             {{\Str::limit($video->course->title, 50)}}
