@@ -13,12 +13,12 @@
                                 <h3 class="mb-0">{{ __('Question Management') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="/admin/quizzes/{{$quiz->id}}" class="btn btn-sm btn-primary">{{ __('Back to Quiz') }}</a>
+                                <a href="{{ route('questions.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="/admin/quizzes/{{$quiz->id}}/questions" autocomplete="off">
+                        <form method="post" action="{{ route('questions.store') }}" autocomplete="off">
                             @csrf
                             <h6 class="heading-small text-muted mb-4">{{ __('Question information') }}</h6>
                             <div class="pl-lg-4">
@@ -77,7 +77,9 @@
                                     <label class="form-control-label" for="input-quiz">{{ __('Quiz') }}</label>
 
                                     <select name="quiz_id" id="input-quiz" required class="form-control">
-                                            <option value="{{$quiz->id}}" selected>{{$quiz->name}}</option>
+                                        @foreach(\App\Quiz::orderBy('id', 'desc')->get() as $quiz)
+                                            <option value="{{$quiz->id}}">{{$quiz->name}}</option>
+                                        @endforeach
                                     </select>
 
                                     @if ($errors->has('quiz_id'))
