@@ -1,8 +1,9 @@
-<html>
-<head>
+@extends('layouts.user_layout')
 
-</head>
-<body>
-    <h1>This is Home View</h1>
-</body>
-</html>
+
+@section('content')
+    @include('includes.home_picture')
+    @include('includes.mycourses')
+    @include('includes.track_famous_courses')
+@endsection
+
