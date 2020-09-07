@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+
+use App\Course;
 use App\Http\Controllers\Controller;
+use App\Quiz;
+use App\Track;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +28,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $courses = Course::orderBy('id', 'desc')->take(5)->get();
+        $tracks = Track::orderBy('id', 'desc')->take(5)->get();
+        $users = User::where('admin', '0')->orderBy('id', 'desc')->take(5)->get();
+        $quizzes = Quiz::orderBy('id', 'desc')->take(5)->get();
+
+        return view('admin.dashboard',
+            ['courses'=>$courses, 'tracks' => $tracks, 'users' => $users, 'quizzes' => $quizzes]);
     }
 }
