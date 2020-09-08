@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-sm-4 offset-sm-2">
           <figure class="col-md-4 d-md-inline-block">
-            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(2).jpg"
+            <a href="/courses/{{$course->slug}}"
               data-size="1600x1067">
               @if($course->photo)
               <img src="/storage/courseImgs/{{ $course->photo->filename }}">
@@ -36,7 +36,7 @@
           </figure>
         </div>
         <div class="col-sm-4">
-            <h3><a href="">{{\Str::limit($course->title, 30)}}</a></h3>
+            <h3><a href="/courses/{{$course->slug}}">{{\Str::limit($course->title, 30)}}</a></h3>
             <h4>Track: <a href="">{{$course->track->name}}</a></h4><br>
             <h5><a href="">{{count($course->users)}} users are learning this course.</a></h5>
         </div>

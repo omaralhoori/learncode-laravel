@@ -32,6 +32,18 @@
                                         </span>
                                     @endif
                                 </div>
+                                <div class="form-group{{ $errors->has('description') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-description">{{ __('Description') }}</label>
+                                    <input type="text" name="description" id="input-description"
+                                           class="form-control form-control-alternative{{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                           placeholder="{{ __('Description') }}" value="{{ old('title') }}" required autofocus>
+
+                                    @if ($errors->has('description'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('description') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
 
                                 <div class="form-group{{ $errors->has('link') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-link">{{ __('Link') }}</label>

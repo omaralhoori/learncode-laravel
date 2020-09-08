@@ -22,6 +22,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//slugable package
+Route::get('/courses/{slug}', 'CourseController@index');
+
 // Admin Routes
 
 Route::group(['middleware' => ['auth','admin']], function () {
